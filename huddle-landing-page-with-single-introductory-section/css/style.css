@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width:  1440px;
+  background-image: url("../images/bg-mobile.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: hsl(257, 40%, 49%);
+  min-height: 100vh;
+  width: 78%;
+  margin: 0 auto;
+
+  color: white;
+
+  header {
+    margin: 30px 0;
+
+    img {
+      width: 105px;
+    }
+  }
+
+  main {
+    text-align: center;
+
+    figure {
+      margin: 25px 0;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    section {
+      article {
+        h1 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 600;
+        }
+
+        p {
+          margin: 10px 0;
+          font-family: "Open Sans", sans-serif;
+          font-weight: 400;
+          font-size: small;
+        }
+      }
+
+      .btn-register {
+        button {
+          background-color: white;
+          color: hsl(257, 40%, 49%);
+          padding: 10px 60px;
+          border-radius: 50px;
+          border: none;
+          margin: 10px 0;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    gap: 10px;
+    margin: 30px 0;
+    justify-content: center;
+    a {
+      border-radius: 100%;
+      border: 1px solid white;
+      color: white;
+      text-decoration: none;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 24px;
+      height: 24px;
+      i {
+        font-size: 0.5rem;
+      }
+    }
+  }
+}
+
+@media (width > 425px) {
+  body {
+    width: 90%;
+
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("../images/bg-desktop.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    header {
+      img {
+        width: 150px;
+      }
+    }
+
+    main {
+      margin: 0;
+      flex-grow: 1;
+      display: flex;
+      gap: 40px;
+      figure {
+        margin: 0;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      section {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding: 30px;
+        article {
+          text-align: left;
+          h1 {
+            font-size: 2rem;
+          }
+        }
+        .btn-register {
+          display: flex;
+          justify-content: flex-start;
+          width: 100%;
+
+          button {
+            padding: 10px 50px;
+          }
+        }
+      }
+    }
+
+    footer {
+      justify-content: flex-end;
+      margin-bottom: 20px;
+
+      a {
+        width: 32px;
+        height: 32px;
+        i {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+}
