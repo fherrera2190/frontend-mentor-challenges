@@ -7,7 +7,7 @@
 }
 
 body {
-  max-width:  1440px;
+  max-width: 1440px;
   background-image: url("../images/bg-mobile.svg");
   background-size: contain;
   background-repeat: no-repeat;
@@ -87,6 +87,11 @@ body {
       }
     }
   }
+}
+
+.hover:hover {
+  color: white;
+  background-color: hsl(300, 69%, 71%);
 }
 
 @media (width > 425px) {
