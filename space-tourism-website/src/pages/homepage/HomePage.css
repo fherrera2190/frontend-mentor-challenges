@@ -1,0 +1,117 @@
+body {
+  background-image: url("../../assets/home/background-home-mobile.jpg");
+}
+
+.container {
+  padding: 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .home-text {
+    margin: 0 auto;
+    flex-grow: 1;
+    h1 {
+      font-size: 100px;
+      margin: 2rem;
+    }
+    h2 {
+      color: rgb(208, 214, 249);
+    }
+    p {
+      line-height: 180%;
+      color: rgb(208, 214, 249);
+    }
+  }
+
+  .explore-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+    transition: all 0.5s ease-in;
+    margin: 3rem auto;
+    a {
+      width: 144px;
+      height: 144px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      text-decoration: none;
+      color: #0b0d17;
+      font-size: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+.explore-hovered {
+  background-color: hsla(0, 0%, 99%, 0.08);
+}
+
+@media (768px <= width) {
+  body {
+    background-image: url("../../assets/home/background-home-tablet.jpg");
+  }
+  .container {
+    padding: 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    .home-text {
+      max-width: 70%;
+      margin: 0 auto;
+      h1 {
+        font-size: 144px;
+
+        margin: 2rem 0;
+      }
+      h2 {
+        color: rgb(208, 214, 249);
+        margin-top: 5rem;
+        font-size: 2rem;
+      }
+    }
+    .explore-link {
+      width: 350px;
+      height: 350px;
+
+      border-radius: 50%;
+      transition: all 0.5s ease-in;
+      margin: 0 auto;
+      a {
+        width: 250px;
+        height: 250px;
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (width >1024px) {
+  body {
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+  }
+  .container {
+    padding: 96px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    .home-text {
+      margin: 0;
+      max-width: 50%;
+      text-align: left;
+    }
+
+    .explore-link {
+      margin: 0;
+    }
+  }
+}
