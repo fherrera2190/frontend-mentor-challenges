@@ -1,3 +1,5 @@
+import "./StatsCard.css";
+
 interface Props {
   card: { img: string; title: string; text: string };
 }
