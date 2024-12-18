@@ -6,7 +6,7 @@ interface Props {
 
 export const StatsCard = ({ card }: Props) => {
   return (
-    <div className="stats-card">
+    <div className="card">
       <figure>
         <img src={card.img} alt={card.title} />
       </figure>

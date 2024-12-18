@@ -1,0 +1,18 @@
+.get-started {
+  color: white;
+  background-image: url("./images/bg-boost-mobile.svg");
+  background-color: var(--color2);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 4rem 0;
+  h2 {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (width> 375px) {
+  .get-started {
+    background-image: url("./images/bg-boost-desktop.svg");
+  }
+}

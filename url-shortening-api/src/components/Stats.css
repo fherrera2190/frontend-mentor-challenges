@@ -1,20 +1,34 @@
 .stats {
+  background-color: #f4f4f4;
+
   text-align: center;
-  padding: 1rem;
+
   .stats-title {
     h2 {
       margin-bottom: 1rem;
     }
     p {
       color: var(--color4);
+      font-size: medium;
+      margin-bottom: 5rem;
     }
+  }
 
+  .stats-cards {
+    display: flex;
+    flex-direction: column;
   }
 }
 
-.stats-cards{
 
-}
-.stats-card{
+@media (width> 768px) {
 
+
+  .stats {
+
+  
+    .stats-cards {
+      flex-direction: row;
+    }
+  }
 }

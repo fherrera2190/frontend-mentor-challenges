@@ -1,17 +1,14 @@
-import { NavBar } from "./components/NavBar";
 import "./App.css";
-import { Banner } from "./components/Banner";
-import { LinkSection } from "./components/LinkSection";
-import { Stats } from "./components/Stats";
+import { NavBar } from "./components/NavBar";
+import { Main } from "./components/Main";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
     <>
       <NavBar />
-      <Banner />
-      <LinkSection />
-      <Stats />
-      
+      <Main />
+      <Footer />
     </>
   );
 }

@@ -4,6 +4,8 @@ header {
   justify-content: space-between;
   padding: 20px 0;
   position: relative;
+  width: 90%;
+  margin: 0 auto;
 
   .menu-hamburger {
     border: none;
@@ -14,15 +16,18 @@ header {
     }
   }
 
-  nav {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
     background-color: var(--color2);
     position: absolute;
-    display: none;
     width: 100%;
     border-radius: 10px;
     padding: 20px;
     text-align: center;
-
+    display: none;
     top: 81px;
 
     ul {
@@ -42,6 +47,41 @@ header {
       li:last-child {
         background-color: var(--color1);
         width: 100%;
+      }
+    }
+  }
+}
+
+@media (width> 768px) {
+  header {
+    .mobile-menu,
+    .menu-hamburger {
+      display: none;
+    }
+
+    .desktop-menu {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      ul {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 2rem;
+        padding-left: 2rem;
+        li {
+          a {
+            color: var(--color4);
+            text-decoration: none;
+          }
+        }
+      }
+      .rigth-menu {
+        li:last-child {
+          a {
+            color: white;
+          }
+        }
       }
     }
   }

@@ -1,7 +1,6 @@
 import { useState } from "react";
 import "./NavBar.css";
 
-
 export const NavBar = () => {
   const [menuState, setMenuState] = useState(false);
 
@@ -22,7 +21,10 @@ export const NavBar = () => {
           <i className="fa-solid fa-bars"></i>
         )}
       </button>
-      <nav className={`${menuState ? "showMenu" : ""}`}>
+      <nav
+        className={`mobile-menu } `}
+        style={{ display: menuState ? "block" : "none" }}
+      >
         <ul>
           <li>
             <a href="#">Features</a>
@@ -34,6 +36,27 @@ export const NavBar = () => {
             <a href="#">Resources</a>
           </li>
           <hr />
+          <li>
+            <a href="#">Login</a>
+          </li>
+          <li className="btn">
+            <a href="#">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+      <nav className="desktop-menu">
+        <ul className="left-menu">
+          <li>
+            <a href="#">Features</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">Resources</a>
+          </li>
+        </ul>
+        <ul className="rigth-menu">
           <li>
             <a href="#">Login</a>
           </li>

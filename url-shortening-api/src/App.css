@@ -1,8 +1,12 @@
 #root {
   max-width: 1440px;
   margin: 0 auto;
-  width: 90%;
 }
+
+main{
+  margin: 0 auto;
+}
+
 
 .showMenu {
   display: block;

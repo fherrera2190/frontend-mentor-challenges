@@ -1,10 +1,9 @@
-.stats-card {
+.card {
   background-color: white;
-  margin: 4rem 0;
+  margin: 5rem auto;
   position: relative;
-
-  padding: 60px 20px;
   max-width: 280px;
+  padding: 50px 20px;
 
   figure {
     background-color: var(--color2);
@@ -22,9 +21,10 @@
   }
 
   h3 {
-    margin-bottom: 15px;
+    margin: 20px 0 10px 0;
   }
   p {
     color: var(--color4);
+    font-size: medium;
   }
 }
