@@ -1,0 +1,20 @@
+.stats {
+  text-align: center;
+  padding: 1rem;
+  .stats-title {
+    h2 {
+      margin-bottom: 1rem;
+    }
+    p {
+      color: var(--color4);
+    }
+
+  }
+}
+
+.stats-cards{
+
+}
+.stats-card{
+
+}

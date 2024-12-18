@@ -1,7 +1,6 @@
 .navbar {
   padding: 24px;
   text-decoration: none;
-
   button {
     background: none;
     border: none;
@@ -15,6 +14,7 @@
         color: white;
         line-height: 171.9%;
         text-decoration: none;
+        text-wrap: nowrap;
       }
     }
   }
@@ -95,6 +95,13 @@
     padding: 24px 0;
     .nav-links {
       width: 50%;
+    }
+  }
+
+  .navbar-header {
+    .logo {
+      padding-left: 72px;
+      height: 40px;
     }
   }
 }

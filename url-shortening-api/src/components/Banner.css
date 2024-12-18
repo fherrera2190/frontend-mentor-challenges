@@ -1,0 +1,25 @@
+.banner-container {
+  .banner {
+    img {
+      width: 100%;
+    }
+  }
+
+  .banner-text {
+    text-align: center;
+    h1 {
+      font-size: 1.9rem;
+      line-height: 2.5rem;
+    }
+
+    p {
+      margin: 1.5rem 0;
+      color: var(--color4);
+      font-weight: 400;
+    }
+
+    button {
+      font-size: 18px;
+    }
+  }
+}

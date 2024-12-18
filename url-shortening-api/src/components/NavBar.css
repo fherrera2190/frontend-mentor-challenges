@@ -1,0 +1,48 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  position: relative;
+
+  .menu-hamburger {
+    border: none;
+    background-color: transparent;
+
+    i {
+      font-size: 1.7rem;
+    }
+  }
+
+  nav {
+    background-color: var(--color2);
+    position: absolute;
+    display: none;
+    width: 100%;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    top: 81px;
+
+    ul {
+      list-style: none;
+      hr {
+        margin: 10px 0;
+        opacity: 0.2;
+      }
+      li {
+        padding: 10px;
+        margin: 10px 0;
+        a {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      li:last-child {
+        background-color: var(--color1);
+        width: 100%;
+      }
+    }
+  }
+}

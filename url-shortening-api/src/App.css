@@ -1,0 +1,9 @@
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.showMenu {
+  display: block;
+}
