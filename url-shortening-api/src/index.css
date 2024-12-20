@@ -31,9 +31,9 @@
 }
 
 .btn-rectangle {
-  background-color: var(--color1);
   padding: 10px 2rem;
   border: none;
   color: white;
   border-radius: 5px;
+  background-color: var(--color1);
 }
