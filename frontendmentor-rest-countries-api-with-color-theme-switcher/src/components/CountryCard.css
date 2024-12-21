@@ -1,0 +1,33 @@
+.country-card {
+  border: 1px solid rgba(78, 74, 74, 0.25);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  overflow: hidden;
+  width: 21%;
+  min-width: 220px;
+  & .flag {
+    height: 150px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  & h4 {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  & .info {
+    font-size: small;
+    padding: 20px;
+    & strong{
+      font-weight: 600;
+    }
+    & small{
+      font-weight: 200;
+    }
+  }
+}

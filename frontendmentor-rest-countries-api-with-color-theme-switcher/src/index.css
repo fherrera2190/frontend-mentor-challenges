@@ -1,0 +1,122 @@
+/* FONTS */
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* 
+- Dark Blue (Dark Mode Elements): hsl(209, 23%, 22%)
+- Very Dark Blue (Dark Mode Background): hsl(207, 26%, 17%)
+- Very Dark Blue (Light Mode Text): hsl(200, 15%, 8%)
+- Dark Gray (Light Mode Input): hsl(0, 0%, 52%)
+- Very Light Gray (Light Mode Background): hsl(0, 0%, 98%)
+- White (Dark Mode Text & Light Mode Elements): hsl(0, 0%, 100%) 
+*/
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue: hsl(207, 26%, 17%);
+  --very-dark-blue-light-mode-text: hsl(200, 15%, 8%);
+  --dark-gray: #858585;
+  --very-light-gray: #fafafa;
+  --white: #ffffff;
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: light-dark(#333b3c, #ffffffde);
+  /* background-color: light-dark(#efedea, #242424); */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.light {
+  /* forces light color-scheme */
+  min-height: 100vh;
+  color-scheme: light;
+  background-color: hsl(0, 0%, 98%);
+  color: black;
+  & a {
+    color-scheme: light;
+    text-decoration: none;
+    color: black;
+  }
+  header {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  .options {
+    & .filter {
+      background-color: hsl(0, 0%, 100%);
+      border: 1px solid rgba(78, 74, 74, 0.25);
+
+      & .regions {
+        border: 1px solid rgba(78, 74, 74, 0.25);
+      }
+    }
+
+    & .search {
+      border: 1px solid rgba(78, 74, 74, 0.25);
+      background-color: hsl(0, 0%, 100%);
+    }
+  }
+}
+.dark {
+  /* forces dark color-scheme */
+  color-scheme: dark;
+  min-height: 100vh;
+
+  background-color: hsl(207, 26%, 17%);
+
+  & a {
+    text-decoration: none;
+    color: white;
+  }
+  .country-card {
+    background-color: hsl(209, 23%, 22%);
+  }
+  header {
+    background-color: hsl(209, 23%, 22%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .options {
+    & .filter {
+      background-color: hsl(209, 23%, 22%);
+
+      border: 1px solid rgba(78, 74, 74, 0.25);
+
+      & .regions {
+        border: 1px solid rgba(78, 74, 74, 0.25);
+      }
+    }
+
+    & .search {
+      border: 1px solid rgba(78, 74, 74, 0.25);
+      background-color: hsl(209, 23%, 22%);
+      & button {
+        background-color: inherit;
+      }
+      & input {
+        background-color: inherit;
+      }
+    }
+  }
+}

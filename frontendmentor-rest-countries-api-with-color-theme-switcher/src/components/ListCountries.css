@@ -1,0 +1,19 @@
+.countries {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  gap: 40px;
+}
+
+@media (width<=768px) {
+  .countries {
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+  }
+  .country-card {
+    width: 250px;
+  }
+}

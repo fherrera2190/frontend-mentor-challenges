@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Frontend Mentor | Product list with cart</title>
+  </head>
+
+  <body>
+    <main>
+      <section class="products-section">
+        <h1>Desserts</h1>
+        <article class="products">
+          <!-- <div class="card">
+          <div class="card__header">
+            <picture>
+              <source srcset="./assets/images/image-waffle-desktop.jpg" media="(min-width: 769px)">
+              <source srcset="./assets/images/image-waffle-tablet.jpg"
+                media="(max-width: 768px) and (min-width: 376px)">
+              <img src="./assets/images/image-waffle-mobile.jpg" alt="product image" class="card__image" />
+            </picture>
+            <div class="btn_product card__button__quantity" id="button-content-${id}">
+              <button class="decrement" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="2" fill="none" viewBox="0 0 10 2">
+                  <path fill="#fff" d="M0 .375h10v1.25H0V.375Z" />
+                </svg>
+              </button>
+              <p class="card__text quantityValue-${id}">100</p>
+              <button class="increment" id="increment-button-${id}">
+                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="none" viewBox="0 0 10 10">
+                  <path fill="#fff" d="M10 4.375H5.625V0h-1.25v4.375H0v1.25h4.375V10h1.25V5.625H10v-1.25Z" />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="card__body">
+            <p><small class="card__category">Waffle</small></p>
+            <h5 class="card__name">Waffle with Berries</h6>
+          </div>
+          <div class="card__footer">
+            <h5 class="card__price"><b>$6.5</b></h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__header">
+            <picture>
+              <source srcset="./assets/images/image-waffle-desktop.jpg" media="(min-width: 769px)">
+              <source srcset="./assets/images/image-waffle-tablet.jpg"
+                media="(max-width: 768px) and (min-width: 376px)">
+              <img src="./assets/images/image-waffle-mobile.jpg" alt="product image" class="card__image" />
+            </picture>
+            <div class="btn_product card__button" id="button-content-${id}">
+              <button class="button__add increment" id="boton1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" fill="none" viewBox="0 0 21 20">
+                  <g fill="#C73B0F" clip-path="url(#a)">
+                    <path
+                      d="M6.583 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM15.334 18.75a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM3.446 1.752a.625.625 0 0 0-.613-.502h-2.5V2.5h1.988l2.4 11.998a.625.625 0 0 0 .612.502h11.25v-1.25H5.847l-.5-2.5h11.238a.625.625 0 0 0 .61-.49l1.417-6.385h-1.28L16.083 10H5.096l-1.65-8.248Z" />
+                    <path d="M11.584 3.75v-2.5h-1.25v2.5h-2.5V5h2.5v2.5h1.25V5h2.5V3.75h-2.5Z" />
+                  </g>
+                  <defs>
+                    <clipPath id="a">
+                      <path fill="#fff" d="M.333 0h20v20h-20z" />
+                    </clipPath>
+                  </defs>
+                </svg>
+                <p class="card__text">Add to cart</p>
+              </button>
+            </div>
+          </div>
+          <div class="card__body">
+            <p><small class="card__category">Waffle</small></p>
+            <h5 class="card__name">Waffle with Berries</h6>
+          </div>
+          <div class="card__footer">
+            <h5 class="card__price"><b>$6.5</b></h5>
+          </div>
+        </div> -->
+        </article>
+      </section>
+      <section class="cart-section">
+        <h3>You Cart (<span class="total-quantity">0</span>)</h3>
+        <article class="cart"></article>
+      </section>
+    </main>
+    <div id="modal-order" class="modal">
+      <div class="modal-content">
+        <svg
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M21 32.121L13.5 24.6195L15.6195 22.5L21 27.879L32.3775 16.5L34.5 18.6225L21 32.121Z"
+            fill="#1EA575"
+          />
+          <path
+            d="M24 3C19.8466 3 15.7865 4.23163 12.333 6.53914C8.8796 8.84665 6.18798 12.1264 4.59854 15.9636C3.0091 19.8009 2.59323 24.0233 3.40352 28.0969C4.21381 32.1705 6.21386 35.9123 9.15077 38.8492C12.0877 41.7861 15.8295 43.7862 19.9031 44.5965C23.9767 45.4068 28.1991 44.9909 32.0364 43.4015C35.8736 41.812 39.1534 39.1204 41.4609 35.667C43.7684 32.2135 45 28.1534 45 24C45 18.4305 42.7875 13.089 38.8493 9.15076C34.911 5.21249 29.5696 3 24 3ZM24 42C20.4399 42 16.9598 40.9443 13.9997 38.9665C11.0397 36.9886 8.73256 34.1774 7.37018 30.8883C6.0078 27.5992 5.65134 23.98 6.34587 20.4884C7.04041 16.9967 8.75474 13.7894 11.2721 11.2721C13.7894 8.75473 16.9967 7.0404 20.4884 6.34587C23.98 5.65133 27.5992 6.00779 30.8883 7.37017C34.1774 8.73255 36.9886 11.0397 38.9665 13.9997C40.9443 16.9598 42 20.4399 42 24C42 28.7739 40.1036 33.3523 36.7279 36.7279C33.3523 40.1036 28.7739 42 24 42Z"
+            fill="#1EA575"
+          />
+        </svg>
+        <h2>Order Confirmed</h2>
+        <section class="modal-section">
+          <h6>We hope you enjoy your food!</h6>
+          <article id="order-products">
+
+          </article>
+          <button class="btn_generic" onclick="newOrder()">Start new order</button>  
+        </section>
+      </div>
+    </div>
+
+    <script src="./assets/js/data.js"></script>
+    <!-- <script src="./assets/js/test.js"></script> -->
+  </body>
+</html>

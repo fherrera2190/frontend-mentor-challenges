@@ -1,0 +1,10 @@
+.border {
+  text-decoration: none;
+  border: 1px solid rgba(78, 74, 74, 0.25);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
