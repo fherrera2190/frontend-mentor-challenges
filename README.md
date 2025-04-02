@@ -21,7 +21,7 @@ Cada carpeta dentro de este repositorio está dedicada a un proyecto específico
 
 1. Clona este repositorio:
     ```bash
-    git clone https://github.com/tu-usuario/frontendmentor-projects.git
+    git clone https://github.com/fherrera2190/frontend-mentor-challenges.git
     ```
 2. Navega a la carpeta del proyecto deseado.
 3. Abre el archivo `index.html` en tu navegador.
