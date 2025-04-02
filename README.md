@@ -23,7 +23,18 @@ Cada carpeta dentro de este repositorio está dedicada a un proyecto específico
     ```bash
     git clone https://github.com/fherrera2190/frontend-mentor-challenges.git
     ```
-2. Navega a la carpeta del proyecto deseado.
-3. Abre el archivo `index.html` en tu navegador.
+2. Navega a la carpeta del proyecto deseado:  
+    ```bash
+    cd nombre-del-proyecto
+    ```
+3. Instala las dependencias:  
+    ```bash
+    npm install
+    ```
+4. Inicia el servidor de desarrollo:  
+    ```bash
+    npm start
+    ```
+5. Abre el proyecto en tu navegador.  
 
 ✨ ¡Disfruta explorando mis proyectos y no dudes en dejar tus comentarios! 💬
