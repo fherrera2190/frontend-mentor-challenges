@@ -4,53 +4,101 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <title>Frontend Mentor | E-commerce product page</title>
 </head>
 
 <body>
-
-  <nav>
-    <div>
-      <button aria-label="Close menu">X</button>
-      <div><img src="./assets/images/logo.svg" alt="logo"></div>
-      <ul>
-        <li>
-          <a href="#">
-            Collections
-          </a>
+  <header>
+    <div id="overlay" class="overlay hidden"></div>
+    <nav>
+      <ul class="nav-left">
+        <li class="menu-button-container">
+          <button id="toggleBtn" class="menu-button"><img id="icon-menu" src="./assets/images/icon-menu.svg"
+              alt="icon-menu"></button>
         </li>
         <li>
-          <a href="#">
-            Men
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Women
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            About
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Contact
-          </a>
+          <img src="./assets/images/logo.svg" alt="logo">
         </li>
       </ul>
-    </div>
-    <div>
-      <img src="./assets/images/icon-cart.svg" alt="cart">
-      <img src="./assets/images/image-avatar.png" alt="avatar">
-    </div>
-  </nav>
+      <div id="sidebar" class="sidebar">
+        <ul>
+          <li>
+            <a href="#">
+              Collections
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Men
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Women
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+      <ul class="nav-right">
+        <li>
+          <img src="./assets/images/icon-cart.svg" alt="cart">
+        </li>
+        <li>
+          <img src="./assets/images/image-avatar.png" alt="avatar">
+        </li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Swiper -->
+
+  <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-1.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-2.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-3.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-4.jpg" />
+      </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
+  <div thumbsSlider="" class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-1-thumbnail.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-2-thumbnail.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-3-thumbnail.jpg" />
+      </div>
+      <div class="swiper-slide">
+        <img src="./assets/images/image-product-4-thumbnail.jpg" />
+      </div>
+    </div>
+  </div>
 
   Sneaker Company
 
@@ -70,6 +118,9 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/main.js"></script>
 </body>
 
 </html>

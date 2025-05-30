@@ -1,0 +1,242 @@
+/* === Variables CSS (usando custom properties) === */
+:root {
+  /* Primary Colors */
+  --clr-orange: hsl(26, 100%, 55%);
+  --clr-pale-orange: hsl(25, 100%, 94%);
+
+  /* Neutral Colors */
+  --clr-very-dark-blue: hsl(220, 13%, 13%);
+  --clr-dark-grayish-blue: hsl(219, 9%, 45%);
+  --clr-grayish-blue: hsl(220, 14%, 75%);
+  --clr-light-grayish-blue: hsl(223, 64%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black-75: hsla(0, 0%, 0%, 0.75); /* para lightbox */
+
+  /* Typography */
+  --font-family: "Kumbh Sans", sans-serif;
+  --font-size-base: 16px;
+
+  /* Layout breakpoints */
+  --breakpoint-mobile: 375px;
+  --breakpoint-desktop: 1440px;
+}
+
+/* === Global Styles === */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  background-color: var(--clr-white);
+  color: var(--clr-very-dark-blue);
+  line-height: 1.5;
+}
+
+/* === Utility Classes (opcionales) === */
+.text-orange {
+  color: var(--clr-orange);
+}
+
+.bg-light-grayish-blue {
+  background-color: var(--clr-light-grayish-blue);
+}
+
+.menu-button {
+  /* position: absolute; */
+  z-index: 1100;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 1rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.hidden {
+  display: none;
+}
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  ul {
+    list-style: none;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  & li {
+    img {
+      width: 1rem;
+      height: 1rem;
+      cursor: pointer;
+    }
+  }
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 66%;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+  transition: left 0.3s ease;
+  z-index: 1002;
+  padding: 60px 0px;
+  & ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    & a {
+      text-decoration: none;
+      color: var(--clr-very-dark-blue);
+    }
+  }
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #444;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* === Responsive Layout Suggestions === */
+
+@media(width<=375px){
+  .mySwiper{
+    display: none !important;
+  }
+}
+
+@media (width>375px) {
+  .container {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  
+  .menu-button-container {
+    display: none;
+  }
+
+  .sidebar {
+    position: static;
+    width: 100%;
+    background: inherit;
+    box-shadow: none;
+    & ul {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: start;
+      padding: 0;
+      margin: 0 0 0 2rem;
+      & a {
+        text-decoration: none;
+        color: var(--clr-grayish-blue);
+      }
+    }
+  }
+}
