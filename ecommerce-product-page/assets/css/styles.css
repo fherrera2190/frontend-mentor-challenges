@@ -1,4 +1,5 @@
-/* === Variables CSS (usando custom properties) === */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+
 :root {
   /* Primary Colors */
   --clr-orange: hsl(26, 100%, 55%);
@@ -38,17 +39,7 @@ body {
   line-height: 1.5;
 }
 
-/* === Utility Classes (opcionales) === */
-.text-orange {
-  color: var(--clr-orange);
-}
-
-.bg-light-grayish-blue {
-  background-color: var(--clr-light-grayish-blue);
-}
-
 .menu-button {
-  /* position: absolute; */
   z-index: 1100;
   border: none;
   background-color: transparent;
@@ -72,21 +63,27 @@ body {
 }
 /* NAV */
 
-nav {
+header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  ul {
-    list-style: none;
-    li {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      button {
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    ul {
+      list-style: none;
+      li {
         display: flex;
         align-items: center;
         justify-content: center;
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
       }
     }
   }
@@ -142,6 +139,81 @@ nav {
   left: 0;
 }
 
+/* Card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  & .card-body {
+    width: 90%;
+    margin: 2rem auto;
+    & .company {
+      text-transform: uppercase;
+      color: var(--clr-dark-grayish-blue);
+      font-size: 0.7rem;
+      letter-spacing: 0.1rem;
+    }
+    & .product-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+    & .description {
+      color: var(--clr-grayish-blue);
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+    & div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  & .card-footer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 1rem auto;
+
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+
+    & .quantity {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+      background-color: var(--clr-light-grayish-blue);
+
+      & p {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+    }
+    & .add-to-cart {
+      background-color: var(--clr-orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--clr-black-75);
+    }
+  }
+}
+
+.card-button {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  
+}
+
+/* Swiper */
 .swiper {
   width: 100%;
   height: 100%;
@@ -204,8 +276,8 @@ nav {
 }
 /* === Responsive Layout Suggestions === */
 
-@media(width<=375px){
-  .mySwiper{
+@media (width<=375px) {
+  .mySwiper {
     display: none !important;
   }
 }
@@ -215,7 +287,7 @@ nav {
     max-width: 1440px;
     margin: 0 auto;
   }
-  
+
   .menu-button-container {
     display: none;
   }
